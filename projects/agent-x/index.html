@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Agent X, a student research and product design case study by Ioannis Koupidis.">
+  <meta name="description" content="Agent X, a UX research case study about contextual guidance for new Escape from Tarkov players.">
   <title>Agent X · Ioannis Koupidis</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/site.css">
 </head>
-<body class="case-page">
+<body class="case-page agent-case">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
@@ -37,9 +37,10 @@
         <a class="back-link" href="../../#work">← Back to work</a>
         <nav class="case-nav">
           <a href="#overview">Overview</a>
-          <a href="#problem">Problem</a>
-          <a href="#research">Research</a>
-          <a href="#definition">Definition</a>
+          <a href="#challenge">Challenge</a>
+          <a href="#interviews">Interviews</a>
+          <a href="#matrix">Matrix</a>
+          <a href="#synthesis">Synthesis</a>
           <a href="#concept">Concept</a>
           <a href="#prototype">Prototype</a>
           <a href="#testing">Testing</a>
@@ -52,16 +53,16 @@
       <header class="reveal">
         <p class="case-kicker">Student project · Medieinstitutet Stockholm · 2026</p>
         <h1 class="case-title">Agent X</h1>
-        <p class="case-deck">How might contextual guidance help new players find their footing in Escape from Tarkov without flattening the difficulty its audience plays it for?</p>
+        <p class="case-deck">Designing guidance for a deliberately difficult game, without taking away the discovery, tension, and agency that make players choose it.</p>
       </header>
 
       <div class="case-hero agent reveal" aria-label="Agent X concept preview">
         <div class="agent-screen">
           <div class="agent-screen-top">
             <span>Agent X</span>
-            <span>Contextual guidance</span>
+            <span>Need detected</span>
           </div>
-          <p class="agent-prompt">Help arrives after the game sees you struggle.</p>
+          <p class="agent-prompt">You have failed here before. Look northeast before your next move.</p>
         </div>
       </div>
 
@@ -76,10 +77,10 @@
         </div>
         <div class="fact">
           <dt>Synthesis</dt>
-          <dd>2 personas and an emotional journey</dd>
+          <dd>Research matrix, 2 personas, emotional journey</dd>
         </div>
         <div class="fact">
-          <dt>Validation</dt>
+          <dt>Evaluation</dt>
           <dd>4 wireframe views, 3 think aloud sessions</dd>
         </div>
       </dl>
@@ -87,190 +88,239 @@
       <section id="overview" class="case-section reveal">
         <p class="section-index">01 · Overview</p>
         <h2>Guidance without an easy mode.</h2>
-        <p class="lead">Escape from Tarkov is deliberately demanding. Its opacity, high stakes and unforgiving systems are part of the experience, but they can also stop a newcomer before learning becomes rewarding.</p>
-        <p>This supervised student project followed one complete research cycle: interview players, synthesise the evidence, define a narrow intervention, make the idea tangible and put it in front of people. The result was not a redesign of the game. It was a restrained companion concept that appears only after repeated failure.</p>
+        <p class="lead">Escape from Tarkov asks players to learn through uncertainty. That makes failure meaningful, but it can also leave a newcomer unable to understand what to try next.</p>
+        <p>This supervised student project followed one complete research cycle. I interviewed players, organised the evidence in a matrix, defined two working personas, mapped the emotional journey, designed a narrow intervention, and evaluated its interaction logic.</p>
 
-        <div class="stat-grid">
-          <article class="stat-card">
-            <strong>8</strong>
-            <p>text interviews conducted with players on Discord.</p>
+        <div class="case-summary-grid">
+          <article>
+            <span class="card-label">Question</span>
+            <p>Can contextual guidance help a new player continue learning without making the game easier?</p>
           </article>
-          <article class="stat-card">
-            <strong>2</strong>
-            <p>personas created from the synthesis: the Seeker and the Returner.</p>
+          <article>
+            <span class="card-label">Response</span>
+            <p>A companion that stays quiet until repeated failure suggests that help could be useful.</p>
           </article>
-          <article class="stat-card">
-            <strong>3</strong>
-            <p>think aloud sessions used to evaluate the four wireframe views.</p>
+          <article>
+            <span class="card-label">Outcome</span>
+            <p>The interaction was understandable. Its value to the target audience still requires a better recruited study.</p>
           </article>
         </div>
       </section>
 
-      <section id="problem" class="case-section reveal">
-        <p class="section-index">02 · Problem</p>
+      <section id="challenge" class="case-section reveal">
+        <p class="section-index">02 · Challenge</p>
         <h2>The friction is both the feature and the risk.</h2>
-        <p class="lead">New players can abandon Tarkov early. Simply lowering its difficulty would weaken the reason its established audience chooses it, so the product question was not how to make the game easier. It was how to make progress more legible.</p>
+        <p class="lead">The obvious response would be more tutorials or clearer instructions. Research reframed the challenge: preserve difficulty, but help players interpret failure well enough to form another hypothesis.</p>
+
+        <div class="tension-frame" aria-label="Product tension between challenge and guidance">
+          <article>
+            <span class="card-label">Preserve</span>
+            <h3>Player agency</h3>
+            <p>Tension, discovery, and the satisfaction of learning through action.</p>
+          </article>
+          <div class="tension-core">
+            <span>Product tension</span>
+            <strong>Useful uncertainty</strong>
+          </div>
+          <article>
+            <span class="card-label">Improve</span>
+            <h3>Progress legibility</h3>
+            <p>Enough context for a player to understand what deserves another attempt.</p>
+          </article>
+        </div>
 
         <blockquote class="pull-quote">Keep the challenge. Make the next step possible to understand.</blockquote>
+      </section>
 
-        <div class="split">
-          <article class="split-panel">
-            <h3>What had to remain</h3>
-            <p>The tension, discovery and player agency that make Tarkov distinct. The intervention could not solve the game on the player's behalf.</p>
-          </article>
-          <article class="split-panel">
-            <h3>What could change</h3>
-            <p>The moment after repeated failure, when a player needs enough context to form another hypothesis and try again.</p>
-          </article>
+      <section id="interviews" class="case-section reveal">
+        <p class="section-index">03 · User interviews</p>
+        <h2>Eight perspectives across the learning curve.</h2>
+        <p class="lead">I conducted eight text interviews on Discord with players ranging from beginners to veterans, including one person who had stopped playing. The written format created a record that could be compared and revisited during synthesis.</p>
+
+        <div class="interview-ledger" aria-label="Eight anonymised interview records">
+          <div class="ledger-head"><span>Interview record</span><span>8 participants</span></div>
+          <div class="participant-row">
+            <span>P01</span><span>P02</span><span>P03</span><span>P04</span><span>P05</span><span>P06</span><span>P07</span><span>P08</span>
+          </div>
+          <div class="spectrum"><span>Beginner</span><i aria-hidden="true"></i><span>Veteran</span></div>
+          <p>Experience covered the learning curve and included the perspective of one person who had quit.</p>
+        </div>
+
+        <div class="interview-focus">
+          <article><span>01</span><h3>Interpreting failure</h3><p>What helps a failed attempt become information rather than only punishment?</p></article>
+          <article><span>02</span><h3>Finding a next move</h3><p>What lets a player form another hypothesis when the game gives little explanation?</p></article>
+          <article><span>03</span><h3>Accepting guidance</h3><p>When does help support learning, and when does it interfere with discovery?</p></article>
+          <article><span>04</span><h3>Continuing or leaving</h3><p>What keeps curiosity alive, and what turns repeated failure into an exit?</p></article>
+        </div>
+
+        <div class="method-note">
+          <strong>Evidence discipline</strong>
+          <p>This portfolio shows the synthesis rather than invented participant quotations. Identities remain anonymous, and findings are framed as interpretations from a small qualitative study.</p>
         </div>
       </section>
 
-      <section id="research" class="case-section reveal">
-        <p class="section-index">03 · Research</p>
-        <h2>Eight conversations across the learning curve.</h2>
-        <p class="lead">I ran eight text interviews on Discord, spanning beginners through veteran players and including one person who had quit. The format produced a written record that I could compare, group and revisit during synthesis.</p>
+      <section id="matrix" class="case-section reveal">
+        <p class="section-index">04 · Research matrix</p>
+        <h2>From interview signal to product decision.</h2>
+        <p class="lead">The matrix made the reasoning traceable. Each design response had to connect to a pattern in the interviews, and every row kept an unanswered question visible.</p>
 
-        <div class="insight-grid">
-          <article class="insight-card">
-            <span class="card-label">Interpretation 01</span>
-            <h3>Difficulty needs meaning</h3>
-            <p>Failure can be motivating when a player can connect it to a decision and imagine what to try next.</p>
-          </article>
-          <article class="insight-card">
-            <span class="card-label">Interpretation 02</span>
-            <h3>Timing changes the help</h3>
-            <p>Guidance offered before struggle risks feeling intrusive; offered after repeated failure, it can feel earned.</p>
-          </article>
-          <article class="insight-card">
-            <span class="card-label">Interpretation 03</span>
-            <h3>Agency must survive</h3>
-            <p>The intervention should create a direction, not provide a route that removes discovery.</p>
-          </article>
+        <div class="matrix-wrap" role="region" aria-label="Research evidence matrix" tabindex="0">
+          <table class="research-matrix">
+            <thead>
+              <tr>
+                <th scope="col">Interview signal</th>
+                <th scope="col">Interpretation</th>
+                <th scope="col">Product response</th>
+                <th scope="col">Still unknown</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Failure can motivate when it teaches something.</td>
+                <td>Difficulty needs a legible relationship between action and outcome.</td>
+                <td>Offer context that helps the player form another hypothesis.</td>
+                <td>How much context is enough for a target player?</td>
+              </tr>
+              <tr>
+                <td>Help offered too early can interrupt discovery.</td>
+                <td>Timing changes whether guidance feels useful or intrusive.</td>
+                <td>Keep the companion silent until repeated failure indicates need.</td>
+                <td>What trigger should activate the intervention?</td>
+              </tr>
+              <tr>
+                <td>Players value making their own decisions.</td>
+                <td>Removing uncertainty would also remove part of the experience.</td>
+                <td>Point toward a direction without revealing a complete route.</td>
+                <td>Where is the boundary between a clue and a solution?</td>
+              </tr>
+              <tr>
+                <td>New and returning players carry different knowledge.</td>
+                <td>A single onboarding response would treat unlike needs as equal.</td>
+                <td>Use the Seeker as the primary profile and the Returner as a check.</td>
+                <td>Would the Returner need a different intervention?</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-
-        <p>These are design interpretations from a small qualitative study, not claims about the whole player population. They gave the concept a direction and supplied assumptions that later testing needed to challenge.</p>
+        <p class="caption">The matrix records design interpretations, not claims about the whole player population.</p>
       </section>
 
-      <section id="definition" class="case-section reveal">
-        <p class="section-index">04 · Definition</p>
-        <h2>Two personas, one critical moment.</h2>
-        <p class="lead">The interviews were synthesised into two personas, the Seeker and the Returner, and an emotional journey map. The map shifted attention away from a generic onboarding flow and toward the point where repeated failure turns curiosity into frustration.</p>
+      <section id="synthesis" class="case-section reveal">
+        <p class="section-index">05 · Synthesis</p>
+        <h2>Two profiles, one critical moment.</h2>
+        <p class="lead">The matrix led to two working personas and an emotional journey. The Seeker became the primary audience. The Returner prevented the concept from treating every knowledge gap as a first time problem.</p>
 
-        <div class="finding-list">
-          <article class="finding">
-            <span class="finding-number">01</span>
+        <div class="persona-grid">
+          <article class="persona-card primary">
+            <span class="card-label">Primary working persona</span>
             <h3>The Seeker</h3>
-            <p>The target profile for the concept: a newcomer willing to learn, but at risk of losing momentum when the game gives too little context.</p>
+            <dl>
+              <div><dt>State</dt><dd>New, motivated, and willing to learn.</dd></div>
+              <div><dt>Need</dt><dd>A way to connect failure with another useful attempt.</dd></div>
+              <div><dt>Risk</dt><dd>Curiosity becomes frustration before learning becomes rewarding.</dd></div>
+            </dl>
           </article>
-          <article class="finding">
-            <span class="finding-number">02</span>
+          <article class="persona-card">
+            <span class="card-label">Secondary working persona</span>
             <h3>The Returner</h3>
-            <p>A second profile used to keep the concept sensitive to players who come back with partial knowledge and different support needs.</p>
+            <dl>
+              <div><dt>State</dt><dd>Returns with partial knowledge and uneven confidence.</dd></div>
+              <div><dt>Need</dt><dd>Context that respects what is already understood.</dd></div>
+              <div><dt>Risk</dt><dd>Generic onboarding repeats information without resolving the gap.</dd></div>
+            </dl>
           </article>
-          <article class="finding">
-            <span class="finding-number">03</span>
-            <h3>The intervention point</h3>
-            <p>The companion activates after repeated failure, when a small amount of contextual guidance can support another attempt.</p>
-          </article>
+        </div>
+
+        <div class="journey-block">
+          <div class="journey-intro"><span class="card-label">Emotional journey</span><h3>The moment worth designing for</h3></div>
+          <ol class="journey-map">
+            <li><span>01</span><strong>Curiosity</strong><small>The challenge feels inviting.</small></li>
+            <li><span>02</span><strong>Uncertainty</strong><small>The system reveals little.</small></li>
+            <li><span>03</span><strong>Repeated failure</strong><small>Learning becomes hard to read.</small></li>
+            <li class="critical"><span>04</span><strong>Frustration</strong><small>Momentum is at risk.</small></li>
+            <li class="response"><span>05</span><strong>Context</strong><small>Agent X offers a direction.</small></li>
+            <li><span>06</span><strong>Agency</strong><small>The player chooses the next move.</small></li>
+          </ol>
         </div>
       </section>
 
       <section id="concept" class="case-section reveal">
-        <p class="section-index">05 · Concept</p>
+        <p class="section-index">06 · Concept</p>
         <h2>A companion that knows when to stay quiet.</h2>
-        <p class="lead">Agent X is a diegetic companion: guidance is presented as part of the game world rather than as a detached tutorial layer. It does not begin by explaining everything. It waits for repeated failure, then offers context while leaving the next decision with the player.</p>
+        <p class="lead">Agent X presents guidance as part of the game world. It does not begin by explaining everything. It waits for evidence of struggle, then offers enough context for another decision.</p>
+
+        <div class="decision-rule">
+          <span>Repeated failure</span><i>+</i><span>Unclear next step</span><i>=</i><strong>Offer one clue</strong>
+        </div>
 
         <div class="decision-grid">
-          <article class="decision-card">
-            <span class="card-label">Trigger</span>
-            <h3>After failure</h3>
-            <p>Support is conditional, so it responds to demonstrated need rather than assuming it.</p>
-          </article>
-          <article class="decision-card">
-            <span class="card-label">Form</span>
-            <h3>Inside the world</h3>
-            <p>The companion keeps the guidance within the fiction and tone of the experience.</p>
-          </article>
-          <article class="decision-card">
-            <span class="card-label">Boundary</span>
-            <h3>Point, don't solve</h3>
-            <p>The concept gives enough information to continue learning without taking over the task.</p>
-          </article>
+          <article class="decision-card"><span class="card-label">Trigger</span><h3>After demonstrated need</h3><p>Support responds to struggle instead of assuming it.</p></article>
+          <article class="decision-card"><span class="card-label">Form</span><h3>Inside the world</h3><p>The voice and timing protect the tone of the game experience.</p></article>
+          <article class="decision-card"><span class="card-label">Boundary</span><h3>Point, do not solve</h3><p>The clue creates direction while the decision remains with the player.</p></article>
         </div>
       </section>
 
       <section id="prototype" class="case-section reveal">
-        <p class="section-index">06 · Prototype</p>
-        <h2>Four views, kept deliberately spare.</h2>
-        <p class="lead">I translated the concept into four wireframe views. At this fidelity, the purpose was to test whether people could notice the intervention and understand what it was doing. It was not intended to evaluate production art, animation or final game writing.</p>
+        <p class="section-index">07 · Prototype</p>
+        <h2>Four views tested one interaction idea.</h2>
+        <p class="lead">The low fidelity sequence focused on timing, noticeability, and comprehension. It was not intended to validate final art, animation, game writing, or the complete feature.</p>
 
-        <div class="split">
-          <article class="split-panel">
-            <h3>What the prototype represented</h3>
-            <ul>
-              <li>A companion embedded in the game's context</li>
-              <li>Activation after repeated failure</li>
-              <li>A sequence across four wireframe views</li>
-            </ul>
+        <div class="wireframe-flow" aria-label="Simplified reconstruction of the four view prototype logic">
+          <article class="wireframe-card">
+            <div class="wireframe-ui"><span class="wf-map"></span><span class="wf-status"></span><span class="wf-player"></span></div>
+            <span class="card-label">View 01</span><h3>Stay quiet</h3><p>The normal experience remains untouched.</p>
           </article>
-          <article class="split-panel">
-            <h3>What it did not represent</h3>
-            <ul>
-              <li>A finished visual interface</li>
-              <li>A complete onboarding system</li>
-              <li>Evidence that target players would want the feature</li>
-            </ul>
+          <article class="wireframe-card">
+            <div class="wireframe-ui alert"><span class="wf-map"></span><span class="wf-status"></span><span class="wf-player"></span></div>
+            <span class="card-label">View 02</span><h3>Detect need</h3><p>Repeated failure creates the condition for help.</p>
+          </article>
+          <article class="wireframe-card">
+            <div class="wireframe-ui prompt"><span class="wf-map"></span><span class="wf-status"></span><span class="wf-player"></span><span class="wf-message">Look northeast</span></div>
+            <span class="card-label">View 03</span><h3>Offer context</h3><p>A restrained prompt gives the attempt a direction.</p>
+          </article>
+          <article class="wireframe-card">
+            <div class="wireframe-ui choice"><span class="wf-map"></span><span class="wf-status"></span><span class="wf-player"></span><span class="wf-path"></span></div>
+            <span class="card-label">View 04</span><h3>Return control</h3><p>No complete route is revealed. The player acts.</p>
           </article>
         </div>
+        <p class="caption">Simplified reconstruction of the prototype logic for this portfolio presentation.</p>
       </section>
 
       <section id="testing" class="case-section reveal">
-        <p class="section-index">07 · Testing</p>
+        <p class="section-index">08 · Testing</p>
         <h2>The interaction read clearly. The sample did not.</h2>
-        <p class="lead">Three participants completed think aloud sessions with the wireframes. They located the guidance and understood it without being pointed toward it. This was the behaviour the prototype was designed to test. The wireframes did not need to explain themselves.</p>
+        <p class="lead">Three participants aged 40 to 46 completed think aloud sessions. They found the guidance and understood its purpose without being directed toward it. None had played Tarkov, so the study could not establish value for the Seeker.</p>
 
-        <div class="split">
-          <article class="split-panel">
-            <h3>What the sessions supported</h3>
-            <p>The guidance was discoverable and its purpose was understandable within the wireframe sequence.</p>
-          </article>
-          <article class="split-panel">
-            <h3>What they could not support</h3>
-            <p>All three testers were aged 40 to 46 and none had played Tarkov. They did not match the Seeker profile the concept targeted.</p>
-          </article>
+        <div class="matrix-wrap" role="region" aria-label="Evaluation matrix" tabindex="0">
+          <table class="research-matrix testing-matrix">
+            <thead><tr><th scope="col">Evaluation question</th><th scope="col">Evidence</th><th scope="col">Conclusion</th></tr></thead>
+            <tbody>
+              <tr><td>Can people notice the guidance?</td><td>All three participants located it without prompting.</td><td><span class="evidence-status supported">Initial support</span></td></tr>
+              <tr><td>Can people understand its purpose?</td><td>All three understood what the prompt was doing.</td><td><span class="evidence-status supported">Initial support</span></td></tr>
+              <tr><td>Does the target audience value the intervention?</td><td>No participant matched the Seeker profile.</td><td><span class="evidence-status open">Unanswered</span></td></tr>
+              <tr><td>Does deliberate silence feel appropriate?</td><td>The sample lacked the game context needed to judge it.</td><td><span class="evidence-status open">Unanswered</span></td></tr>
+            </tbody>
+          </table>
         </div>
 
         <blockquote class="pull-quote">A usable interaction is not the same as a validated product decision.</blockquote>
-
-        <p>That mismatch mattered most for one screen designed to work by deliberately staying silent. Without target players who understood the surrounding game context, that decision could not be evaluated properly.</p>
       </section>
 
       <section id="reflection" class="case-section reveal">
-        <p class="section-index">08 · Reflection</p>
-        <h2>Name the weak evidence, then design the next test.</h2>
-        <p class="lead">This was my first complete research cycle, run under supervision. Its clearest outcome is twofold: the interaction was understandable in the sessions, and the recruitment was not strong enough to test the concept with confidence.</p>
+        <p class="section-index">09 · Reflection</p>
+        <h2>Name the weak evidence, then design the next study.</h2>
+        <p class="lead">The project produced a clear concept and a useful early signal. It also exposed a recruitment mistake. The next round should answer a value question with actual target players, not repeat a comprehension test with convenient participants.</p>
 
         <div class="finding-list">
-          <article class="finding">
-            <span class="finding-number">01</span>
-            <h3>Recruit against the persona</h3>
-            <p>The next round needs actual target players who match the Seeker profile, not convenient substitutes.</p>
-          </article>
-          <article class="finding">
-            <span class="finding-number">02</span>
-            <h3>Test the silence</h3>
-            <p>The deliberately quiet view needs the context and expectations of real Tarkov players to be evaluated fairly.</p>
-          </article>
-          <article class="finding">
-            <span class="finding-number">03</span>
-            <h3>Separate clarity from value</h3>
-            <p>Finding and understanding the guidance answers a usability question. It does not yet show that the intervention belongs in the game.</p>
-          </article>
+          <article class="finding"><span class="finding-number">01</span><h3>Recruit against the Seeker</h3><p>Include new Tarkov players who are motivated to learn but struggling to interpret repeated failure.</p></article>
+          <article class="finding"><span class="finding-number">02</span><h3>Compare timing thresholds</h3><p>Test whether guidance is better after one failure, repeated failure, or an explicit request.</p></article>
+          <article class="finding"><span class="finding-number">03</span><h3>Measure renewed agency</h3><p>Observe whether a clue helps players form a new plan, not merely whether they can see the interface.</p></article>
         </div>
 
         <div class="outcome-banner">
-          <h3>The concept became clearer. So did the limit of the evidence.</h3>
-          <p>Agent X produced two personas, an emotional journey, four wireframe views and an initial usability signal. Its next responsible step is targeted recruitment, not a claim that the idea is already validated.</p>
+          <span class="card-label">Current conclusion</span>
+          <h3>The concept is coherent. The value hypothesis is still open.</h3>
+          <p>Agent X now has a traceable path from interviews to matrix, personas, journey, product rules, prototype, and evaluation. Its next responsible step is a study with the people it was designed to help.</p>
         </div>
       </section>
 
