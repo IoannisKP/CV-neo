@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Radio, an iOS internet radio app directed by Ioannis Koupidis in one working day.">
+  <title>Radio · Ioannis Koupidis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/site.css">
+</head>
+<body class="case-page">
+  <a class="skip-link" href="#case-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../../" aria-label="Ioannis Koupidis, home"><strong>Ioannis Koupidis</strong><span>Product management</span></a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="../../#work" aria-current="page">Work</a>
+        <a href="../../#experience">Experience</a>
+        <a href="../../#about">About</a>
+      </nav>
+      <div class="header-tools">
+        <a href="../../Ioannis-Koupidis-CV.pdf" download>Résumé ↓</a>
+        <span>Stockholm</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="case-shell">
+    <aside class="case-aside" aria-label="Case study navigation">
+      <div class="case-aside-inner">
+        <a class="back-link" href="../../#work"><span aria-hidden="true">←</span> All work</a>
+        <nav class="case-nav">
+          <a href="#overview" class="active">Overview</a>
+          <a href="#role">Role</a>
+          <a href="#process">Process</a>
+          <a href="#audit">Audit</a>
+          <a href="#device">Device</a>
+          <a href="#decisions">Product decisions</a>
+          <a href="#reflection">Reflection</a>
+        </nav>
+      </div>
+    </aside>
+
+    <main class="case-main" id="case-content">
+      <header class="reveal">
+        <p class="case-kicker">Personal project · Product direction · 2026</p>
+        <h1 class="case-title">Radio</h1>
+        <p class="case-deck">An internet radio player for iOS, scoped and built in one working day. The experiment tested a simple premise: can written scope, independent agent review and physical device testing make a fast build assisted by AI accountable?</p>
+      </header>
+
+      <div class="case-hero radio reveal">
+        <img src="../../assets/images/radio/browse.png" alt="Radio app browse screen on iPhone">
+        <img src="../../assets/images/radio/player.png" alt="Radio app now-playing screen on iPhone">
+        <img src="../../assets/images/radio/search.png" alt="Radio app station search screen on iPhone">
+      </div>
+
+      <dl class="facts reveal">
+        <div class="fact"><dt>Timeframe</dt><dd>8 hours</dd></div>
+        <div class="fact"><dt>Platform</dt><dd>iOS</dd></div>
+        <div class="fact"><dt>My role</dt><dd>Scope, agent direction, acceptance and device testing</dd></div>
+        <div class="fact"><dt>Status</dt><dd>Working build, not shipped</dd></div>
+      </dl>
+
+      <section class="case-section reveal" id="overview">
+        <p class="section-index">01 / Overview</p>
+        <h2>One day. One bounded question.</h2>
+        <p class="lead">Radio was my first attempt at directing a product build assisted by AI without writing the code. The aim was not to manufacture a launch story in eight hours; it was to test a way of working.</p>
+        <p>I wrote the scope before the build began, so “finished” had a definition the building agent could not quietly rewrite. A second agent audited the result. I then moved the build off the simulator and onto a physical iPhone.</p>
+        <div class="stat-grid">
+          <article class="stat-card"><strong>8h</strong><p>from written scope to a handover build tested on a phone.</p></article>
+          <article class="stat-card"><strong>2</strong><p>agents with separate responsibilities: build and audit.</p></article>
+          <article class="stat-card"><strong>24</strong><p>automated tests passing at handover.</p></article>
+        </div>
+        <blockquote class="pull-quote">Fast did not mean finished. It meant the next uncertainty arrived sooner.</blockquote>
+      </section>
+
+      <section class="case-section reveal" id="role">
+        <p class="section-index">02 / Role</p>
+        <h2>I set the boundary and judged the result.</h2>
+        <p class="lead">The agents produced and examined the implementation. I remained responsible for the product definition, the division of labour and the final claim.</p>
+        <div class="split">
+          <article class="split-panel">
+            <h3>My responsibility</h3>
+            <ul>
+              <li>Write the product scope and definition of done</li>
+              <li>Keep the feature set small enough for the eight hour window</li>
+              <li>Separate building from independent review</li>
+              <li>Test the handover build on a physical iPhone</li>
+              <li>Describe the outcome as a working build, not a shipped product</li>
+            </ul>
+          </article>
+          <article class="split-panel">
+            <h3>Agent responsibility</h3>
+            <ul>
+              <li>Agent one implemented against the written scope</li>
+              <li>Agent two audited the first agent’s output</li>
+              <li>The audit rejected completion when blocking faults remained</li>
+              <li>The build loop continued against explicit findings</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="case-section reveal" id="process">
+        <p class="section-index">03 / Process</p>
+        <h2>A relay, not a single prompt.</h2>
+        <p class="lead">The working model made responsibility visible. The builder did not audit itself, and the audit did not replace a final test in the environment where the product would actually run.</p>
+        <div class="decision-grid">
+          <article class="decision-card"><span class="card-label">01 · Scope</span><h3>Define the finish line</h3><p>The required behaviour was written before implementation, keeping the one day build from becoming an expanding backlog.</p></article>
+          <article class="decision-card"><span class="card-label">02 · Build</span><h3>Direct one agent</h3><p>The first agent implemented against the agreed scope and produced a candidate build.</p></article>
+          <article class="decision-card"><span class="card-label">03 · Audit</span><h3>Challenge with another</h3><p>A separate agent reviewed the result and rejected work that presented itself as complete.</p></article>
+        </div>
+        <div class="phone-gallery">
+          <img src="../../assets/images/radio/browse.png" alt="Browse stations in the Radio app">
+          <img src="../../assets/images/radio/player.png" alt="Play a station in the Radio app">
+          <img src="../../assets/images/radio/search.png" alt="Search for stations in the Radio app">
+        </div>
+        <p class="caption">The scoped product: browse, play and search for internet radio stations.</p>
+      </section>
+
+      <section class="case-section reveal" id="audit">
+        <p class="section-index">04 / Audit</p>
+        <h2>“Complete” failed independent review.</h2>
+        <p class="lead">The second agent found four blocking faults in work that had been presented as finished. That was the point of the separation: confidence from the build process was not accepted as evidence.</p>
+        <div class="insight-grid">
+          <article class="insight-card"><span class="card-label">Builder</span><h3>Produce</h3><p>Work quickly against a constrained, written definition.</p></article>
+          <article class="insight-card"><span class="card-label">Auditor</span><h3>Reject</h3><p>Look for reasons the result should not yet be accepted.</p></article>
+          <article class="insight-card"><span class="card-label">Product owner</span><h3>Decide</h3><p>Use the evidence to determine what can honestly be claimed.</p></article>
+        </div>
+        <div class="finding-list">
+          <article class="finding"><span class="finding-number">04</span><h3>Blocking faults at audit</h3><p>The audit did not polish an already complete build; it changed the completion decision.</p></article>
+          <article class="finding"><span class="finding-number">24</span><h3>Tests at handover</h3><p>The automated suite became part of the evidence, without being treated as the whole of it.</p></article>
+          <article class="finding"><span class="finding-number">01</span><h3>Unresolved product status</h3><p>A functional handover build is still not the same thing as a released and supported product.</p></article>
+        </div>
+      </section>
+
+      <section class="case-section reveal" id="device">
+        <p class="section-index">05 / Device</p>
+        <h2>The phone found what the simulator could not.</h2>
+        <p class="lead">A network failure appeared on the physical iPhone but could not be reproduced in the simulator. Testing in the actual context changed the understanding of the build at the last step.</p>
+        <div class="media-frame">
+          <img src="../../assets/images/radio/player.png" alt="Radio player interface running on iPhone">
+          <p class="caption">The player was evaluated where network behaviour and audio playback mattered: on a phone.</p>
+        </div>
+        <div class="split">
+          <article class="split-panel"><h3>Simulator evidence</h3><p>The implementation could launch and exercise expected flows in a controlled environment.</p></article>
+          <article class="split-panel"><h3>Device evidence</h3><p>Real network conditions exposed a failure the controlled environment did not produce.</p></article>
+        </div>
+        <p>The lesson was not simply “test on a phone.” It was that acceptance criteria need to include the environment on which the user’s outcome depends.</p>
+      </section>
+
+      <section class="case-section reveal" id="decisions">
+        <p class="section-index">06 / Product decisions</p>
+        <h2>Scope was the product strategy.</h2>
+        <p class="lead">Eight hours only worked because the experience stayed narrow: find a station, start listening and know what is playing.</p>
+        <div class="decision-grid">
+          <article class="decision-card"><span class="card-label">Browse</span><h3>Start with discovery</h3><p>Give the listener a direct route into available stations without turning the app into a content platform.</p></article>
+          <article class="decision-card"><span class="card-label">Search</span><h3>Support intent</h3><p>Let someone who knows what they want move past browsing and find it directly.</p></article>
+          <article class="decision-card"><span class="card-label">Player</span><h3>Keep playback central</h3><p>Show the station and core controls clearly; defer everything that does not serve listening.</p></article>
+        </div>
+        <div class="media-frame">
+          <img src="../../assets/images/radio/search.png" alt="Radio search interface on iPhone">
+          <p class="caption">A small surface area made both the build and the acceptance decision tractable.</p>
+        </div>
+      </section>
+
+      <section class="case-section reveal" id="reflection">
+        <p class="section-index">07 / Reflection</p>
+        <h2>A working build is not a shipped product.</h2>
+        <p class="lead">At handover the build was working and 24 tests were passing. It had also revealed the limits of the method: audit catches failures the builder misses, and a physical device introduces reality that neither agent nor simulator can fully model.</p>
+        <div class="outcome-banner">
+          <h3>Radio proved the workflow, not the market.</h3>
+          <p>The outcome was a bounded build and a repeatable loop: define, build, audit and verify. I developed that loop further over thirteen days with Scribe.</p>
+          <p><a class="text-link" href="https://github.com/IoannisKP/Radio-iOS-app" target="_blank" rel="noopener">View source on GitHub ↗</a></p>
+        </div>
+        <a class="next-project" href="../scribe/" data-cursor="View case study"><span>Next project</span><strong>Scribe →</strong></a>
+      </section>
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-title">Let’s make complex things <a href="mailto:gkoupidis@gmail.com">work.</a></p>
+      <div class="footer-meta"><span>Ioannis Koupidis · Stockholm</span><div class="footer-links"><a href="mailto:gkoupidis@gmail.com">Email</a><a href="https://www.linkedin.com/in/koupidisyannis/" target="_blank" rel="noopener">LinkedIn</a><a href="../../">Home</a></div></div>
+    </div>
+  </footer>
+  <script src="../../assets/site.js" defer></script>
+</body>
+</html>
