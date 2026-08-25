@@ -46,7 +46,7 @@ directly. Then run `./make-pdf.command`.
 ## Notes
 
 Greek uses different typefaces because Fraunces and IBM Plex Mono ship no Greek
-glyphs: the build substitutes EB Garamond and Noto Sans Mono for that language
+glyphs: the build substitutes Literata and Noto Sans Mono for that language
 only.
 
 The sphere cursor and scroll reveals are progressive enhancements. The cursor
