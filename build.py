@@ -27,23 +27,23 @@ HREFS = {'en': ('./', 'sv/', 'el/'),
          'el': ('../', '../sv/', './')}
 
 FONTS_EL = ('<link href="https://fonts.googleapis.com/css2?'
-            'family=EB+Garamond:ital,wght@0,400..800;1,400..800'
+            'family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900'
             '&family=IBM+Plex+Mono:wght@400;500'
             '&family=Inter:wght@400;500;600'
             '&family=Noto+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">')
 
 # Fraunces and IBM Plex Mono have no Greek glyphs. Verified against Google
-# Fonts: neither ships a greek subset, while Inter and EB Garamond both do.
-# EB Garamond draws lighter than Fraunces, so weights are lifted to hold a
-# comparable ink density.
+# Fonts: neither ships a greek subset, while Inter and Literata both do.
 STYLE_EL = """
 <style>
   /* Fraunces and IBM Plex Mono do not include Greek glyphs. */
-  .hero-copy h1,.case-title,.section-title,.case-section h2,.statement,
+  .hero-title,.case-title,.section-title,.case-section h2,.statement,
   .project-info h3,.experience-card h3,.footer-title{
-    font-family:'EB Garamond',Georgia,serif;
-    font-weight:540;
+    font-family:'Literata',Georgia,serif;
+    font-optical-sizing:auto;
+    font-weight:460;
   }
+  .hero-title{font-size:clamp(1.65rem,2.45vw,2.25rem)}
   .brand,.primary-nav a,.header-tools,.timeline-label,.eyebrow,.project-kicker,
   .text-link,.language-switch{
     font-family:'Noto Sans Mono',ui-monospace,monospace;
