@@ -43,7 +43,6 @@ STYLE_EL = """
     font-optical-sizing:auto;
     font-weight:460;
   }
-  .hero-title{font-size:clamp(1.65rem,2.45vw,2.25rem)}
   .brand,.primary-nav a,.header-tools,.timeline-label,.eyebrow,.project-kicker,
   .text-link,.language-switch{
     font-family:'Noto Sans Mono',ui-monospace,monospace;
